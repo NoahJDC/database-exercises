@@ -1,5 +1,6 @@
 USE employees;
 
+
 SELECT *
 FROM Employees
 WHERE first_name = 'Irena'

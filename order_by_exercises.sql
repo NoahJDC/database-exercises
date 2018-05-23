@@ -6,14 +6,14 @@ WHERE first_name = 'Irena'
       OR first_name = 'Vidya'
       OR first_name = 'Maya'
          AND gender = 'M'
-      ORDER BY first_name ASC , last_name ASC;
+      ORDER BY last_name ASC;
 
 SELECT last_name
 FROM Employees
 WHERE last_name LIKE 'e%'
       AND last_name like '%e';
 
-SELECT last_name
+SELECT *
 FROM Employees
 WHERE last_name LIKE 'e%'
       OR last_name like '%e';
