@@ -3,9 +3,9 @@ USE employees;
 
 SELECT *
 FROM Employees
-WHERE first_name = 'Irena'
+WHERE (first_name = 'Irena'
 OR first_name = 'Vidya'
-OR first_name = 'Maya'
+OR first_name = 'Maya')
 AND gender = 'M';
 
 SELECT last_name
