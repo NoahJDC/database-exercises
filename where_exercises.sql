@@ -1,5 +1,10 @@
 USE employees;
 
+SELECT *
+FROM Employees
+WHERE first_name = 'Irena'
+OR first_name = 'Vidya'
+OR first_name = 'Maya';
 
 SELECT *
 FROM Employees
