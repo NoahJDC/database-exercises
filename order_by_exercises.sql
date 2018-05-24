@@ -8,15 +8,18 @@ WHERE first_name = 'Irena'
          AND gender = 'M'
       ORDER BY last_name ASC;
 
-SELECT last_name
+SELECT *
 FROM Employees
 WHERE last_name LIKE 'e%'
-      AND last_name like '%e';
+      AND last_name like '%e'
+      ORDER BY hire_date ASC;
+
 
 SELECT *
 FROM Employees
 WHERE last_name LIKE 'e%'
-      OR last_name like '%e';
+      OR last_name like '%e'
+      ORDER BY hire_date ASC;
 
 SELECT hire_date
 FROM employees
@@ -31,7 +34,8 @@ from employees
 WHERE last_name LIKE '%q%'
       AND last_name NOT LIKE '%qu%';
 
-SELECT first_name
+SELECT *
 FROM employees
 WHERE hire_date like '199%'
-      AND birth_date like '%-12-25';
+      AND birth_date like '%-12-25'
+      ORDER BY birth_date ASC, hire_date DESC;
