@@ -33,8 +33,7 @@ WHERE birth_date like '%-12-25';
 SELECT last_name
 from employees
 WHERE last_name LIKE '%q%'
-      AND last_name NOT LIKE '%qu%'
-      GROUP BY last_name;
+      AND last_name NOT LIKE '%qu%';
 
 SELECT datediff(now(), hire_date) as 'Days Hired'
 FROM employees
