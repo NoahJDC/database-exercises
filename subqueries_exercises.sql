@@ -27,4 +27,26 @@ WHERE emp_no IN (
 ) AND gender = 'F';
 
 
+SELECT dept_name
+FROM departments
+WHERE dept_no IN (
+  SELECT dept_no
+  FROM dept_manager
+  WHERE to_date > curdate()
+  AND emp_no IN (
+    SELECT emp_no
+    FROM employees
+    WHERE gender = 'F'
+  )
+);
 
+SELECT first_name, last_name
+FROM employees
+WHERE emp_no IN (
+  SELECT emp_no
+  FROM salaries
+  WHERE salary IN (
+    SELECT max(salary)
+    FROM salaries
+  )
+);
